@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tosell</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>product name</th>
+        <th>description</th>
+    </tr>
+    {% for item in m %}
+    <tr>
+        <td>{{ item.pname }}</td>
+        <td>{{ item.description }}</td>
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>

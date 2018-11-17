@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+        <form action="{% url 'tosell' %}">
+        <input type="submit" value="products to be sold">
+        </form>
+                        <form action="{% url 'saleform.home' %}" enctype="multipart/form-data" method="post" class="col s12">
+                            {%  csrf_token %}
+                            {% for field in form3 %}
+                              <p>
+                                {{ field.label_tag }}<br>
+                                {{ field }}
+                                {% for error in field.errors %}
+                                  <p style="color: red">{{ error }}</p>
+                                {% endfor %}
+                              </p>
+                            {% endfor %}
+                            <input type="submit" value="post ad">
+                        </form>
+</body>
+</html>

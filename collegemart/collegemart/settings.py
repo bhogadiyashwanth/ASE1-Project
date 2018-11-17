@@ -39,8 +39,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'phonenumber_field',
     'feedbackpart',
-    'login',
-    'seller'
+    'order',
+    'seller',
+    'registration',
+    'accounts',
 ]
 
 MIDDLEWARE = [
@@ -122,8 +124,8 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'vismith.24.adappa@gmail.com'
-EMAIL_HOST_PASSWORD = ""
+EMAIL_HOST_USER = 'bhogadiyashwanth9@gmail.com'
+EMAIL_HOST_PASSWORD = "satyavishnu1995"
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
@@ -131,4 +133,5 @@ EMAIL_HOST_PASSWORD = ""
 STATIC_URL = '/static/'
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+
