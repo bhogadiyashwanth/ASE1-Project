@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product Selling form</title>
+</head>
+<body>
+ <form action="{% url 'conf' %}" method="POST">
+                            {%  csrf_token %}
+                                    <input id="prod_name" type="text" name="prod_name" required class="validate" placeholder="product Name"><br>
+                                    <textarea id="comments" name="prod_description" class="validate" placeholder="Comments" ></textarea><br>
+                                    <input id="image" type="text" name="image" required class="validate" placeholder="URL of the image"><br>
+                                    <select  name="prod_type" placeholder="product type">
+                                          <option value="hostel">hostel</option>
+                                          <option value="academic">academic</option>
+                                          <option value="electronic">electronic</option>
+                                    </select><br>
+                                    <input type="number" name="amount" id="amount">
+                            <button type="submit">Submit</button>
+
+                        </form>
+</body>
+</html>
